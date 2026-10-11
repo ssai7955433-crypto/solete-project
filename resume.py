@@ -26,10 +26,11 @@ def analyze_resume(text):
     4. ATS Score (0–100)
     5. Missing Skills
     """
-    response = client.chat.completions.create(
-        model="llama3-70b-8192",
-        messages=[{"role":"user","content":prompt}]
-    )
+   response = client.chat.completions.create(
+    model="llama3-70b-8192",
+    messages=[{"role": "user", "content": prompt}]
+)
+
     return response.choices[0].message.content
 
 st.title("AI Resume Analyzer")
