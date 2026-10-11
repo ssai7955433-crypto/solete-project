@@ -30,7 +30,6 @@ def analyze_resume(text):
     model="llama3-70b-8192",
     messages=[{"role": "user", "content": prompt}]
 )
-
     return response.choices[0].message.content
 
 st.title("AI Resume Analyzer")
